@@ -54,12 +54,12 @@ app.post('/api/menu', function(req, res) {
         icon: 'user',
         child: [
           {
-            name: '选项1',
-            key: 101
+            name: '选项1 home',
+            key: 'home'
           },
           {
-            name: '选项2',
-            key: 102
+            name: '选项2 test',
+            key: 'test'
           },
           {
             name: '选项3',
