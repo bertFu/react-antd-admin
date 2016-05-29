@@ -5,20 +5,16 @@ module.exports = [
     icon: 'user',
     child: [
       {
-        name: '选项1',
-        key: 101
+        name: 'Home',
+        key: 'home'
       },
       {
-        name: '选项2',
-        key: 102
+        name: 'Test',
+        key: 'test'
       },
       {
-        name: '选项3',
-        key: 103
-      },
-      {
-        name: '选项4',
-        key: 104
+        name: '首页',
+        key: 'myMain'
       }
     ]
   },
@@ -28,16 +24,16 @@ module.exports = [
     icon: 'laptop',
     child: [
       {
-        name: '选项5',
-        key: 201
+        name: '我的发布',
+        key: 'myRelease'
       },
       {
-        name: '选项2',
-        key: 202
+        name: '我的任务',
+        key: 'myTask'
       },
       {
-        name: '选项3',
-        key: 203
+        name: '我的关注',
+        key: 'myFocus'
       },
       {
         name: '选项4',

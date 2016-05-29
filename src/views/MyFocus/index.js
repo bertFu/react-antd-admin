@@ -71,7 +71,7 @@ const text = `
   it can be found as a welcome guest in many households across the world.
 `;
 
-export default class Test extends React.Component {
+export default class Home extends React.Component {
   constructor () {
     super()
   }

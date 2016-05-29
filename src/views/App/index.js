@@ -9,7 +9,7 @@ import Sidebar from '../../components/Sidebar'
 import Footer from '../../components/Footer'
 import {fetchProfile, logout} from '../../actions/user';
 
-import 'antd/style/index.less';
+import 'antd/dist/antd.less';
 import './index.less';
 
 class App extends React.Component {

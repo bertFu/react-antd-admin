@@ -4,6 +4,7 @@ import { connect } from 'react-redux'
 import { Menu, Icon } from 'antd'
 import { Link } from 'react-router'
 import { getAllMenu, updateNavPath } from '../../actions/menu'
+import testMenu from '../../../fake/menu'
 
 const SubMenu = Menu.SubMenu
 
@@ -36,8 +37,12 @@ class Sidebar extends React.Component {
 
   render () {
     const { items } = this.props
+    // const  items  = testMenu
+    // console.log('items', items);
+    // console.log('testMenu', testMenu);
     let openKey = []
     const menu = items.map((item) => {
+      // console.log('item', item);
       openKey.push('sub'+item.key)
       return (
         <SubMenu

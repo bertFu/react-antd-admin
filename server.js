@@ -48,27 +48,23 @@ app.put('/api/login', function(req, res) {
 app.post('/api/menu', function(req, res) {
   res.json({
     menus: [
-      {
-        key: 1,
-        name: 'Dashboard',
-        icon: 'user',
-        child: [
-          {
-            name: '选项1 home',
-            key: 'home'
-          },
-          {
-            name: '选项2 test',
-            key: 'test'
-          },
-          {
-            name: '选项3',
-            key: 103
-          },
-          {
-            name: '选项4',
-            key: 104
-          }
+        {
+          key: 1,
+          name: 'Dashboard',
+          icon: 'user',
+          child: [
+            {
+              name: 'Home',
+              key: 'home'
+            },
+            {
+              name: 'Test',
+              key: 'test'
+            },
+            {
+              name: '首页',
+              key: 'myMain'
+            }
         ]
       },
       {
@@ -77,16 +73,16 @@ app.post('/api/menu', function(req, res) {
         icon: 'laptop',
         child: [
           {
-            name: '选项5',
-            key: 201
+            name: '我的发布',
+            key: 'myRelease'
           },
           {
-            name: '选项2',
-            key: 202
+            name: '我的任务',
+            key: 'myTask'
           },
           {
-            name: '选项3',
-            key: 203
+            name: '我的关注',
+            key: 'myFocus'
           },
           {
             name: '选项4',

@@ -10,6 +10,10 @@ import App from './views/App';
 import Home from './views/Home';
 import Test from './views/Test';
 import Login from './views/Login';
+import MyTask from './views/MyTask';
+import MyMain from './views/MyMain';
+import MyFocus from './views/MyFocus';
+// import MyRelease from './views/MyRelease';
 
 import {getCookie} from './utils';
 
@@ -29,13 +33,21 @@ ReactDOM.render(
     <Router history={history}>
         <Route path="/" onEnter={validate}>
           <IndexRedirect to="home" />
+          
           <Route component={App}>
             <Route path="home" component={Home}/>
           </Route>
+          
           <Route component={App}>
             <Route path="test" component={Test}/>
           </Route>
+          
+          <Route component={App}>
+            <Route path="myMain" component={MyMain}/>
+          </Route>          
+          
           <Route path="login" component={Login}/>
+          
         </Route>
       </Router>
   </Provider>,
