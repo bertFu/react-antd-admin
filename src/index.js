@@ -12,6 +12,7 @@ import Test from './views/Test';
 import Login from './views/Login';
 import MyTask from './views/MyTask';
 import MyMain from './views/MyMain';
+import ReleaseTask from './views/ReleaseTask';
 import MyFocus from './views/MyFocus';
 // import MyRelease from './views/MyRelease';
 
@@ -44,7 +45,15 @@ ReactDOM.render(
           
           <Route component={App}>
             <Route path="myMain" component={MyMain}/>
-          </Route>          
+          </Route>    
+          
+          <Route component={App}>
+            <Route path="releaseTask" component={ReleaseTask}/>
+          </Route>
+          
+          <Route component={App}>
+            <Route path="myTask" component={MyTask}/>
+          </Route>        
           
           <Route path="login" component={Login}/>
           

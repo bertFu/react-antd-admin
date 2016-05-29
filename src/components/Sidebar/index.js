@@ -1,7 +1,7 @@
 import React, { PropTypes } from 'react'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
-import { Menu, Icon } from 'antd'
+import { Menu, Icon, Badge } from 'antd'
 import { Link } from 'react-router'
 import { getAllMenu, updateNavPath } from '../../actions/menu'
 import testMenu from '../../../fake/menu'
@@ -33,6 +33,10 @@ class Sidebar extends React.Component {
 
   menuClickHandle (item) {
     this.props.updateNavPath(item.keyPath, item.key)
+    console.log('click ', item);
+    this.setState({
+      current: item.key,
+    });
   }
 
   render () {
@@ -47,12 +51,12 @@ class Sidebar extends React.Component {
       return (
         <SubMenu
           key={'sub'+item.key}
-          title={<span><Icon type={item.icon} />{item.name}</span>}
+          title={<span><Icon type={item.icon} /><span>{item.name}</span></span>}
         >
           {item.child.map((node) => {
             return (
               <Menu.Item key={'menu'+node.key}>
-                <Link to={'' + node.key}>{node.name}</Link>
+                 <Link to={'' + node.key}>{node.name}</Link>
               </Menu.Item>
             )
           })}
@@ -63,7 +67,9 @@ class Sidebar extends React.Component {
       <aside className="ant-layout-sider">
         <div className="ant-layout-logo"></div>
         <Menu
-          mode="inline" theme="dark" openKeys={openKey}
+          mode="inline" 
+          theme="dark" 
+          openKeys={openKey}
           onClick={this.menuClickHandle}
         >
           {menu}

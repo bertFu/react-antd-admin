@@ -85,8 +85,8 @@ app.post('/api/menu', function(req, res) {
             key: 'myFocus'
           },
           {
-            name: '选项4',
-            key: 204
+            name: '发起任务',
+            key: 'releaseTask'
           }
         ]
       },

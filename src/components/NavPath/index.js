@@ -40,7 +40,7 @@ NavPath.propTypes = propTypes;
 NavPath.defaultProps = defaultProps;
 
 function mapStateToProps(state) {
-
+console.log('mapStateToProps, 面包屑？', state)
   return {
     navpath: state.menu.navpath
   }
